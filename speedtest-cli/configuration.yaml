@@ -1,0 +1,22 @@
+name: "Speedtest CLI"
+version: "1.0.0"
+slug: "speedtest-cli"
+description: "Add-on para executar testes de velocidade com speedtest-cli"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+startup: application
+boot: auto
+options:
+  interval: 3600
+  server_id: null
+schema:
+  interval: int(60,86400)?
+  server_id: int?
+ports:
+  8099/tcp: 8099
+webui: "http://[HOST]:[PORT:8099]"
